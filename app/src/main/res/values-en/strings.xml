@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EjercicioDrawReciclerFragment</string>
+    <string name="tvREGISTRAR_COCHES" translatable="false">REGISTER A CAR</string>
+    <string name="action_settings" translatable="false">S</string>
+    <string name="etCodigoR">Code</string>
+    <string name="etMarcaR">Brand</string>
+    <string name="etModeloR">Model</string>
+    <string name="btAñadirR">Add</string>
+    <string name="tvBORRAR_COCHES">DELETE CODE</string>
+    <string name="etCodigoB">Code</string>
+    <string name="btBorrarB">Delete</string>
+    <string name="tvCodigoLista">Code</string>
+    <string name="tvMarcaLista">Brand</string>
+    <string name="tvModeloLista">Model</string>
+    <string name="tvCoches">Cars</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+</resources>

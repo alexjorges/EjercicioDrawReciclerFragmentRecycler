@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@android:color/darker_gray"
+>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="10dp"
+                  android:gravity="center"
+                  android:background="@android:color/darker_gray">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            <TextView
+                    android:text="@string/tvCodigoLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvCodigoTitulo"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:padding="20dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvCodigo"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    android:layout_margin="10dp"
+                    android:hint="@string/tvCodigoLista"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            <TextView
+                    android:text="@string/tvMarcaLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvMarcaTitulo"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:padding="20dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvMarca"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    android:layout_margin="10dp"
+                    android:hint="@string/tvMarcaLista"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            <TextView
+                    android:text="@string/tvModeloLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvModeloTitulo"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:padding="20dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvModelo"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    android:layout_margin="10dp"
+                    android:hint="@string/tvModeloLista"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/tvSeparador"
+            android:background="@color/colorPrimary"
+            android:layout_margin="11dp"/>
+
+</RelativeLayout>
+
