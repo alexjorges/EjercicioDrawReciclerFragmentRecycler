@@ -1,19 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">EjercicioDrawReciclerFragment</string>
-    <string name="tvREGISTRAR_COCHES" translatable="false">REGISTER A CAR</string>
-    <string name="action_settings" translatable="false">S</string>
+    <string name="navigation_drawer_open">Abrir navigation drawer</string>
+    <string name="navigation_drawer_close">Cerrar navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings" translatable="false">Opciones</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="tvREGISTRAR_COCHES">REGISTRAR COCHES</string>
     <string name="etCodigoR">Code</string>
-    <string name="etMarcaR">Brand</string>
-    <string name="etModeloR">Model</string>
+    <string name="etMarcaR">Car Brand</string>
+    <string name="etModeloR">Car Model</string>
     <string name="btAñadirR">Add</string>
-    <string name="tvBORRAR_COCHES">DELETE CODE</string>
-    <string name="etCodigoB">Code</string>
+    <string name="tvBORRAR_COCHES">DELETE CARS</string>
     <string name="btBorrarB">Delete</string>
     <string name="tvCodigoLista">Code</string>
-    <string name="tvMarcaLista">Brand</string>
-    <string name="tvModeloLista">Model</string>
+    <string name="tvMarcaLista">Car Brand</string>
+    <string name="tvModeloLista">Car Model</string>
     <string name="tvCoches">Cars</string>
-    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
-    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="etCodigoB">Code</string>
+    <string name="itemAñadir_Coches">Add Cars</string>
+    <string name="itemVer_Coches">Watch Cars</string>
+    <string name="itemBorrar_Coches">Delete Cars</string>
+    <string name="etDesarrollador">Alejandro Jorge Shaw</string>
 </resources>

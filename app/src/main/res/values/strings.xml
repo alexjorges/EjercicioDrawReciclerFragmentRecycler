@@ -7,19 +7,20 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings" translatable="false">Opciones</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tvREGISTRAR_COCHES">REGISTRAR COCHES</string>
     <string name="etCodigoR">Codigo</string>
     <string name="etMarcaR">Marca</string>
     <string name="etModeloR">Modelo</string>
     <string name="btAñadirR">Añadir</string>
     <string name="tvBORRAR_COCHES">BORRAR COCHES</string>
-    <string name="etCodigoB">Código</string>
     <string name="btBorrarB">Borrar</string>
     <string name="tvCodigoLista">Código</string>
     <string name="tvMarcaLista">Marca</string>
     <string name="tvModeloLista">Modelo</string>
     <string name="tvCoches">Coches</string>
-    <string name="tvREGISTRAR_COCHES">REGISTRAR UN COCHE</string>
+    <string name="etCodigoB">Codigo</string>
+    <string name="itemAñadir_Coches">Añadir Coches</string>
+    <string name="itemVer_Coches">Ver Coches</string>
+    <string name="itemBorrar_Coches">Borrar Coches</string>
+    <string name="etDesarrollador">Alejandro Jorge Shaw</string>
 </resources>

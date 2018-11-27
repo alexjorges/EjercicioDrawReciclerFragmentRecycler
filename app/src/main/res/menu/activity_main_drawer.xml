@@ -5,17 +5,17 @@
 
     <item
      android:icon="@drawable/ic_menu_manage"
-    android:title="Ver Coches"
-    android:id="@+id/ver_coches"/>
+    android:title="@string/itemVer_Coches"
+    android:id="@+id/itemVer_coches"/>
 
     <item
     android:icon="@drawable/ic_menu_manage"
-    android:title="Añadir Coches"
-    android:id="@+id/añadir_coches"/>
+    android:title="@string/itemAñadir_Coches"
+    android:id="@+id/itemAñadir_coches"/>
 
     <item
             android:icon="@drawable/ic_menu_manage"
-            android:title="Borrar Coches"
-            android:id="@+id/Borrar_coches"/>
+            android:title="@string/itemBorrar_Coches"
+            android:id="@+id/itemBorrar_coches"/>
 
 </menu>

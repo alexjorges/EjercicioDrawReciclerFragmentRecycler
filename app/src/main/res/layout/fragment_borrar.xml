@@ -3,7 +3,8 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".BorrarFragment">
+             tools:context=".BorrarFragment"
+                android:background="@color/principalBlanco">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -20,7 +21,8 @@
                 android:gravity="center"
                 android:textSize="20sp"
                 android:layout_marginBottom="20dp"
-                android:textStyle="bold" android:id="@+id/tvBorrarCoche"/>
+                android:textStyle="bold"
+                android:id="@+id/tvBorrarCoche"/>
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

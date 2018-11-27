@@ -72,13 +72,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     // método para enlazar el fragment correspondiente según se pulse en una opción
     fun pantallas(id: Int ){
         val fragment = when(id){
-            R.id.ver_coches -> {
+            R.id.itemVer_coches -> {
                 ConsultarFragment()
             }
-            R.id.añadir_coches ->{
+            R.id.itemAñadir_coches ->{
                 AnadirFragment()
             }
-            R.id.Borrar_coches ->{
+            R.id.itemBorrar_coches ->{
                 BorrarFragment()
             }
             else ->{

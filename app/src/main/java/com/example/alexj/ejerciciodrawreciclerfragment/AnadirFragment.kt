@@ -40,17 +40,40 @@ class AnadirFragment : Fragment(), com.android.volley.Response.Listener<String>,
     }
 
     override fun onResponse(response: String?) {
-        var progressDialog: ProgressDialog
-        progressDialog = ProgressDialog(context)
-        progressDialog.setTitle("Añadiendo")
-        progressDialog.setMessage("Añadiendo a la base de datos...")
-        progressDialog.show()
+        // comprobamos que lo que nos devuelve el string es correcto segun nuestro PHP
+        if (response.equals("Existe")) {
 
+            // creamos una nueva ventana
+            var progressDialog: ProgressDialog
+            progressDialog = ProgressDialog(context)
+            progressDialog.setTitle("Añadiendo")
+            progressDialog.setMessage("Añadiendo a la base de datos...")
+            progressDialog.show()
 
-        Handler().postDelayed({progressDialog.dismiss()},3000)
+            // Creamos un Handler utilizando el metodo postDelayed() para cerrar la ventana antes creada cuando queramos
+            Handler().postDelayed({ progressDialog.dismiss() }, 3000)
 
-        Handler().postDelayed(
-            {Toast.makeText(context,"Se ha registrado correctamente",Toast.LENGTH_LONG).show()},2000)
+            // creamos otro Handler y le pasamos un Toast para que lo muestre cuando queramos
+            Handler().postDelayed(
+                { Toast.makeText(context, "Ya existe un coche con este código, pruebe con otro", Toast.LENGTH_LONG).show() }, 2000
+            )
+        }else{
+
+            // creamos una nueva ventana de informacion
+            var progressDialog: ProgressDialog
+            progressDialog = ProgressDialog(context)
+            progressDialog.setTitle("Añadiendo")
+            progressDialog.setMessage("Añadiendo a la base de datos...")
+            progressDialog.show()
+
+            // creamos un Handler utilizando el metodo .postDelayed y le pasamos la ventana anterior para cerrarla cuando queramos
+            Handler().postDelayed({ progressDialog.dismiss() }, 3000)
+
+            // creamos un Handler y le pasamos un Toast para que se muestre cuando queramos
+            Handler().postDelayed(
+                { Toast.makeText(context, "Se ha registrado correctamente", Toast.LENGTH_LONG).show() }, 2000
+            )
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -80,7 +103,7 @@ class AnadirFragment : Fragment(), com.android.volley.Response.Listener<String>,
 
     private fun cargarWebService()
     {
-        var url: String = "http://iesayala.ddns.net/alexjorges/insert.php?codigo="+etCodigo.text.toString()+
+        var url: String = "http://iesayala.ddns.net/alexjorges/insert1.php?codigo="+etCodigo.text.toString()+
                 "&marca="+etMarca.text.toString()+
                 "&modelo="+etModelo.text.toString()
 

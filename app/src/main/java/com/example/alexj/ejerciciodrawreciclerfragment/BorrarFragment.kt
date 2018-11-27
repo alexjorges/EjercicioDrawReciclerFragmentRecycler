@@ -6,16 +6,13 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.android.volley.RequestQueue
 import com.android.volley.VolleyError
+import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.fragment_borrar.*
@@ -43,14 +40,35 @@ class BorrarFragment() : Fragment(), com.android.volley.Response.Listener<String
     private lateinit var stringRequest: StringRequest
 
 
-    // metodo de Volley que nos oblida a implementar
+    // metodo de Volley que nos obliga a implementar
     override fun onResponse(response: String?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        // comprobamos que lo devuelto por Volley(un string), es correcto y lo tratamos
+        if (response.equals("eliminado")) {
+            var progressDialog: ProgressDialog = ProgressDialog(context)
+            progressDialog.setTitle("Borrando")
+            progressDialog.setMessage("Borrando...")
+            progressDialog.show()
+
+            Handler().postDelayed({ progressDialog.dismiss() }, 3000)
+
+            Handler().postDelayed({Toast.makeText(context,"Eliminado correctamente",Toast.LENGTH_LONG).show()},2000)
+
+        }
+        else{
+            var progressDialog: ProgressDialog = ProgressDialog(context)
+            progressDialog.setTitle("Borrando")
+            progressDialog.setMessage("Borrando...")
+            progressDialog.show()
+
+            Handler().postDelayed({progressDialog.dismiss()},3000)
+
+            Toast.makeText(context, "Error, el codigo no existe", Toast.LENGTH_LONG).show()
+        }
     }
 
     // metodo de Volley que nos obliga a implementar
     override fun onErrorResponse(error: VolleyError?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        Toast.makeText(context, "Error, no hay conexion con la base de datos", Toast.LENGTH_LONG).show()
     }
 
 
@@ -100,34 +118,11 @@ class BorrarFragment() : Fragment(), com.android.volley.Response.Listener<String
     private fun cargarWebEliminar() {
 
         // creamos la variable con nuestra url, pasandole como parámetro el texto del EditText
-        val url: String = "http://iesayala.ddns.net/alexjorges/delete.php?codigo="+ etCodigoBorrar.text
+        val urlEliminar: String = "http://iesayala.ddns.net/alexjorges/delete1.php?codigo="+ etCodigoBorrar.text
+        stringRequest = StringRequest(com.android.volley.Request.Method.GET,urlEliminar,this,this)
+        // con esto mandamos la informacion a Volley para que la lea y procece la informacion que queremos envia
+        //
 
-        // con esto mandamos la informacion a Volley para que la lea y procece la informacion que queremos enviar
-        stringRequest = StringRequest(com.android.volley.Request.Method.GET,url,com.android.volley.Response.Listener<String>
-            { response -> // si hay conexion con la base de datos, se ejecuta esto.
-
-                var progressDialog: ProgressDialog = ProgressDialog(context)
-                progressDialog.setTitle("Borrando")
-                progressDialog.setMessage("Borrando...")
-                progressDialog.show()
-
-                Handler().postDelayed({progressDialog.dismiss()},3000)
-
-                Handler().postDelayed({Toast.makeText(context,"Eliminado correctamente",Toast.LENGTH_LONG).show()},2000)
-
-
-            }, com.android.volley.Response.ErrorListener {
-                // didn't work
-                var progressDialog: ProgressDialog = ProgressDialog(context)
-                progressDialog.setTitle("Borrando")
-                progressDialog.setMessage("Borrando...")
-                progressDialog.show()
-
-                Handler().postDelayed({progressDialog.dismiss()},3000)
-
-                Toast.makeText(context,"Error, no se ha podido borrar",Toast.LENGTH_LONG).show()
-            }
-        )
 
         // Mandandole al objeto request el objeto StringRequest
         //nos permite establecer la conexion entre los métodos onErrorResponse y onResponse
